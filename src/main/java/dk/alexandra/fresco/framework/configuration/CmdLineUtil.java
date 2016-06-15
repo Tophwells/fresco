@@ -293,7 +293,7 @@ public class CmdLineUtil {
 			try {
 				maxBatchSize = Integer.parseInt(this.cmd.getOptionValue("b"));
 			} catch(Exception e) {
-				throw new ParseException("");
+				throw new ParseException("Invalid batch size: " + this.cmd.getOptionValue("b"));
 			}
 		} else {
 			maxBatchSize = 4096;
