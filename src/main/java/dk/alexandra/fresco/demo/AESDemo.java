@@ -68,9 +68,9 @@ import dk.alexandra.fresco.lib.helper.sequential.SequentialProtocolProducer;
  * 
  * The two players can then run this application with these parameters:
  * 
- * P1: $ java -jar aes.jar -i1 -s dummy -p1:localhost:9292 -p2:localhost:9994 -in000102030405060708090a0b0c0d0e0f
+ * P1: $ java -jar aes.jar -i1 -s dummy -p1:localhost:9292 -p2:localhost:9994 -in 000102030405060708090a0b0c0d0e0f
  * 
- * P2: $ java -jar aes.jar -i2 -s dummy -p1:localhost:9292 -p2:localhost:9994 -in00112233445566778899aabbccddeeff
+ * P2: $ java -jar aes.jar -i2 -s dummy -p1:localhost:9292 -p2:localhost:9994 -in 00112233445566778899aabbccddeeff
  * 
  * This results in this output (at both parties):
  * 
