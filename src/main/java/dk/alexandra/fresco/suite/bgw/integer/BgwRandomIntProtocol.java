@@ -72,8 +72,9 @@ public class BgwRandomIntProtocol extends BgwProtocol implements Protocol {
 			return EvaluationStatus.HAS_MORE_ROUNDS;
 		case 1:
 			List<ShamirShare> tmp = network.receiveFromAll();
-			reshares = (ShamirShare[]) tmp.toArray();
-			BigInteger ll = ShamirShare.recombine(reshares, parties);
+			ShamirShare[] reshares1 = new ShamirShare[tmp.size()];
+			tmp.toArray(reshares1);
+			BigInteger ll = ShamirShare.recombine(reshares1, parties);
 			this.output.value = new ShamirShare(resourcePool.getMyId(), ll);
 			return EvaluationStatus.IS_DONE;
 		}

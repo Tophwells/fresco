@@ -40,9 +40,17 @@ public class SequentialProtocolProducer implements ProtocolProducer, ProtocolPro
 	
 	protected LinkedList<ProtocolProducer> cs = new LinkedList<ProtocolProducer>();
 
-	public SequentialProtocolProducer(ProtocolProducer... cs) {
+	public SequentialProtocolProducer(ProtocolProducer... cs)
+	{
 		seqh = new SequentialHelper(this);
 		for (ProtocolProducer c : cs) {
+			this.cs.add(c);
+		}
+	}
+	
+	public SequentialProtocolProducer(List<ProtocolProducer> list) {
+		seqh = new SequentialHelper(this);
+		for (ProtocolProducer c : list) {
 			this.cs.add(c);
 		}
 	}
